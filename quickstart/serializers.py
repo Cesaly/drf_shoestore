@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from tutorial.quickstart.models import ShoeItem, Manufacturer
+from quickstart.models import ShoeItem, Manufacturer, ShoeType, ShoeColor
 from rest_framework import serializers
 
 
@@ -17,10 +17,26 @@ class ShoeItemSerializer(serializers.ModelSerializer):
         model = ShoeItem
         fields = [
             'size',
-            'brand name',
+            'brand_name',
             'manufacturer',
             'color',
             'material',
-            'shoe type',
-            'fasten type'
+            'shoe_type',
+            'fasten_type'
+        ]
+
+
+class ShoeTypeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ShoeType
+        fields = [
+            'style'
+        ]
+
+
+class ShoeColorSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ShoeColor
+        fields = [
+            'color_of_shoe',
         ]

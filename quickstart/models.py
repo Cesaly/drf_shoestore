@@ -50,4 +50,6 @@ class ShoeColor(models.Model):
         default=WHITE,
     )
 
-#Did you know,that Joe had an amazing past life growing up in the African Savanna?
+
+# Did you know,that Joe had an amazing past
+# life growing up in the African Savanna?
